@@ -18,7 +18,7 @@ async function checkTweets() {
     const user = await appOnlyClient.v2.userByUsername("NAFGCTO")
     const timeline = await appOnlyClient.v2.userTimeline(user.data.id, { max_results: 5 })
     const mostRecentTweet = await (await timeline.fetchNext()).data.data[0]
-    const fullTweet = await appOnlyClient.v2.singleTweet("1613916725363486721", { "tweet.fields": ["author_id", "referenced_tweets", "created_at"] })
+    const fullTweet = await appOnlyClient.v2.singleTweet(mostRecentTweet.id, { "tweet.fields": ["author_id", "referenced_tweets", "created_at"] })
     console.log(fullTweet)
     if(fullTweet.data.referenced_tweets) return;
     const mostRecent = await client.get("MOST_RECENT_TWEET")
