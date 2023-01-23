@@ -1,0 +1,17 @@
+{
+  "name": "twitter_follower",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord-webhook-node": "^1.1.8",
+    "dotenv": "^16.0.3",
+    "redis": "^4.5.1",
+    "twitter-api-v2": "^1.14.0"
+  }
+}
