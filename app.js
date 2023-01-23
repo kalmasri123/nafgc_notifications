@@ -32,4 +32,4 @@ async function checkTweets() {
 
 
 
-setInterval(checkTweets, 60000)
+setInterval(checkTweets, 300000)
