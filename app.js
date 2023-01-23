@@ -24,7 +24,7 @@ async function checkTweets() {
     const createdAt = new Date(mostRecentTweet.created_at);
     if(mostRecent && createdAt.getTime() <= mostRecent) return;
     await client.set("MOST_RECENT_TWEET",createdAt.getTime())
-    await hook.send(`https://twitter.com/NAFGCTO/status/${fullTweet.data.id}`)
+    await hook.send(`https://twitter.com/NAFGCTO/status/${mostRecentTweet.id}`)
 
 }
 
